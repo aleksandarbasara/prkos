@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full overflow-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRKOS - In Kürze</title>
+    <meta name="description" content="PRKOS - Coming Soon. Stay tuned for something amazing.">
+    <meta name="keywords" content="PRKOS, coming soon, in kürze">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom styles for better readability -->
+    <style>
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .bg-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        @media (max-width: 768px) {
+            .bg-hero {
+                background-attachment: scroll;
+            }
+        }
+        
+        .logo-container {
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+        
+        .logo-white {
+            filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+        
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body class="h-full bg-hero overflow-hidden flex flex-col">
+    <!-- Header -->
+    <header class="relative z-10 p-4 md:p-6 lg:p-8 flex-shrink-0">
+        <div class="container mx-auto">
+            <!-- Logo on the left -->
+            <div class="logo-container">
+                <img src="PRKOS_Logo.svg" 
+                     alt="PRKOS Logo" 
+                     class="h-12 md:h-16 lg:h-20 w-auto transition-all duration-300 hover:scale-105 logo-white">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex items-center justify-start pb-16 md:pb-20">
+        <div class="container mx-auto">
+            <div class="text-left p-4 md:p-6 lg:p-8">
+                <!-- Main Heading -->
+                <h1 class="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold text-white text-shadow mb-4 md:mb-6 lg:mb-8 tracking-wider">
+                    IN KÜRZE
+                </h1>
+                
+               
+            </div>
+        </div>
+    </main>
+
+    <!-- Sticky Footer -->
+    <footer class="sticky-footer p-4 md:p-6 text-center">
+        <p class="text-white text-opacity-70 text-sm text-shadow">
+            © 2025 PRKOS. Alle Rechte vorbehalten.
+        </p>
+    </footer>
+
+    <!-- JavaScript for enhanced interactions -->
+    <script>
+        // Add smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+        
+        // Logo animation enhancement
+        
+        // Add loading animation for logo
+        window.addEventListener('load', function() {
+            const logo = document.querySelector('.logo-container img');
+            if (logo) {
+                logo.style.opacity = '0';
+                logo.style.transform = 'translateY(-20px)';
+                logo.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                
+                setTimeout(() => {
+                    logo.style.opacity = '1';
+                    logo.style.transform = 'translateY(0)';
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
